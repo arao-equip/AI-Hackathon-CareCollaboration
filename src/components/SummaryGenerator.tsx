@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useSummary } from '../contexts/SummaryContext';
 import { usePatient } from '../contexts/PatientContext';
 import { Sparkles, RefreshCw } from 'lucide-react';
 
 export default function SummaryGenerator() {
+  const navigate = useNavigate();
   const { selectedPatient } = usePatient();
   const { 
     filters, 
@@ -41,6 +43,9 @@ export default function SummaryGenerator() {
       setCurrentSummary(mockSummary);
       addSummaryToHistory(mockSummary);
       setIsGenerating(false);
+      
+      // Navigate to treatment summary page
+      navigate('/treatment-summary');
     }, 2000);
   };
 
