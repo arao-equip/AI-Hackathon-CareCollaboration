@@ -9,10 +9,6 @@ export default function Header() {
             <div className="p-2 bg-teal-50 rounded-lg">
               <span className="w-6 h-6 text-teal-600 font-bold text-lg flex items-center justify-center">M</span>
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-gray-900">Care Collaboration</h1>
-              <p className="text-sm text-gray-600">Treatment Summary Tool</p>
-            </div>
           </div>
           <div className="flex items-center space-x-4">
             <div className="text-right">
