@@ -10,8 +10,20 @@ import {
   TrendingUp, 
   Calendar,
   Bell,
-  Hexagon
+  HexagonIcon
 } from 'lucide-react';
+
+// Custom Hexagon Logo Component
+const HexagonLogo = ({ className }: { className?: string }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    className={className}
+  >
+    <path d="M17.5 3.5L22 12l-4.5 8.5h-11L2 12l4.5-8.5h11z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+    <circle cx="12" cy="12" r="4" fill="currentColor"/>
+  </svg>
+);
 
 interface SidebarItem {
   id: string;
@@ -30,7 +42,7 @@ export default function Sidebar() {
   const sidebarItems: SidebarItem[] = [
     {
       id: 'logo',
-      icon: Hexagon,
+      icon: HexagonLogo,
       label: 'Logo',
       path: '/'
     },
