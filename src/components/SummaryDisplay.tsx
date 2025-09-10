@@ -69,9 +69,6 @@ export default function SummaryDisplay() {
 
   return (
     <div className="space-y-6">
-      {/* Metrics Dashboard */}
-      <MetricsDashboard />
-      
       {/* Treatment Summary */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200">
 
@@ -123,6 +120,9 @@ export default function SummaryDisplay() {
           </div>
         )}
       </div>
+      
+      {/* Metrics Dashboard */}
+      <MetricsDashboard />
     </div>
     </div>
   );

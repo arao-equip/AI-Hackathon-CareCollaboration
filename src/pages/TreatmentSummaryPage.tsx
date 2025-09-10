@@ -46,6 +46,8 @@ export default function TreatmentSummaryPage() {
       {/* Treatment Summary */}
       <SummaryDisplay />
 
+      {/* Treatment Summary */}
+
       {/* Granular Data Display */}
       <GranularDataDisplay />
     </div>
