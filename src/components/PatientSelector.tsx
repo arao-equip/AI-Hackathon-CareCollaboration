@@ -6,7 +6,7 @@ export default function PatientSelector() {
   const { selectedPatient, setSelectedPatient, patients } = usePatient();
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+    <div className="bg-primary-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
       {!selectedPatient ? (
         <>
           <h2 className="text-lg font-semibold text-gray-900 mb-4">Select Patient</h2>
@@ -15,11 +15,11 @@ export default function PatientSelector() {
               <button
                 key={patient.id}
                 onClick={() => setSelectedPatient(patient)}
-                className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors text-left"
+                className="p-4 border border-gray-200 rounded-lg hover:border-primary-teal hover:bg-teal-light transition-colors text-left"
               >
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                    <User className="w-5 h-5 text-blue-600" />
+                  <div className="w-10 h-10 bg-teal-light rounded-full flex items-center justify-center">
+                    <User className="w-5 h-5 text-primary-teal" />
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">{patient.name}</p>
@@ -33,8 +33,8 @@ export default function PatientSelector() {
       ) : (
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-              <User className="w-5 h-5 text-blue-600" />
+            <div className="w-10 h-10 bg-teal-light rounded-full flex items-center justify-center">
+              <User className="w-5 h-5 text-primary-teal" />
             </div>
             <div>
               <p className="font-medium text-gray-900">{selectedPatient.name}</p>
@@ -43,7 +43,7 @@ export default function PatientSelector() {
           </div>
           <button
             onClick={() => setSelectedPatient(null)}
-            className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+            className="text-primary-teal hover:text-deep-teal text-sm font-medium"
           >
             Change Patient
           </button>

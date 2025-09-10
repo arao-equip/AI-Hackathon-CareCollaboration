@@ -71,7 +71,7 @@ export default function SummaryDisplay() {
   return (
     <div className="space-y-6">
       {/* Treatment Summary */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+      <div className="bg-primary-white rounded-lg shadow-sm border border-gray-200">
         {/* Header with Action Buttons */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <div className="flex items-center space-x-3">
@@ -121,7 +121,7 @@ export default function SummaryDisplay() {
               <div className="flex space-x-2">
                 <button
                   onClick={handleSave}
-                  className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-1"
+                  className="px-3 py-2 bg-primary-teal text-white rounded-lg hover:bg-deep-teal transition-colors flex items-center space-x-1"
                 >
                   <Save className="w-4 h-4" />
                   <span>Save</span>
@@ -137,7 +137,7 @@ export default function SummaryDisplay() {
             ) : (
               <button
                 onClick={handleEdit}
-                className="px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-1"
+             className="px-3 py-2 bg-primary-teal text-white rounded-lg hover:bg-deep-teal transition-colors flex items-center space-x-1"
               >
                 <Edit3 className="w-4 h-4" />
                 <span>Edit</span>
@@ -184,7 +184,7 @@ export default function SummaryDisplay() {
           <textarea
             value={editedContent}
             onChange={(e) => setEditedContent(e.target.value)}
-            className="w-full h-96 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none font-mono text-sm"
+          className="w-full h-96 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-teal focus:border-transparent resize-none font-mono text-sm"
             placeholder="Edit your treatment summary..."
           />
         ) : (
@@ -210,7 +210,7 @@ export default function SummaryDisplay() {
       {/* Share Modal */}
       {showShareModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
+       <div className="bg-primary-white rounded-lg shadow-xl max-w-md w-full mx-4">
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <h3 className="text-lg font-semibold text-gray-900">Share Treatment Summary</h3>
               <button
@@ -281,7 +281,7 @@ export default function SummaryDisplay() {
                   // Handle share logic here
                   setShowShareModal(false);
                 }}
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+               className="px-4 py-2 bg-primary-teal text-white rounded-lg hover:bg-deep-teal transition-colors"
               >
                 Share Summary
               </button>

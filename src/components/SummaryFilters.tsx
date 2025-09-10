@@ -58,7 +58,7 @@ export default function SummaryFilters() {
   const isPartiallySelected = filters.dataTypes.length > 0 && filters.dataTypes.length < dataTypes.length;
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+    <div className="bg-primary-white rounded-lg shadow-sm border border-gray-200 p-6">
       <div className="flex items-center space-x-2 mb-4">
         <Filter className="w-5 h-5 text-gray-600" />
         <h3 className="text-lg font-semibold text-gray-900">Treatment Summary Filters</h3>
@@ -79,7 +79,7 @@ export default function SummaryFilters() {
                 type="date"
                 value={filters.dateRange.start}
                 onChange={(e) => handleDateChange('start', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-teal focus:border-transparent"
               />
             </div>
             <div>
@@ -88,7 +88,7 @@ export default function SummaryFilters() {
                 type="date"
                 value={filters.dateRange.end}
                 onChange={(e) => handleDateChange('end', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-teal focus:border-transparent"
               />
             </div>
           </div>
@@ -96,31 +96,31 @@ export default function SummaryFilters() {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setQuickRange(7)}
-              className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors"
+              className="px-3 py-1 text-xs bg-teal-light text-primary-teal rounded-full hover:bg-teal-dark hover:text-white transition-colors"
             >
               Last 7 days
             </button>
             <button
               onClick={() => setQuickRange(30)}
-              className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors"
+              className="px-3 py-1 text-xs bg-teal-light text-primary-teal rounded-full hover:bg-teal-dark hover:text-white transition-colors"
             >
               Last 30 days
             </button>
             <button
               onClick={() => setQuickRange(90)}
-              className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors"
+              className="px-3 py-1 text-xs bg-teal-light text-primary-teal rounded-full hover:bg-teal-dark hover:text-white transition-colors"
             >
               Last 90 days
             </button>
             <button
               onClick={setLastAppointment}
-              className="px-3 py-1 text-xs bg-green-100 text-green-700 rounded-full hover:bg-green-200 transition-colors"
+              className="px-3 py-1 text-xs bg-marigold-light text-marigold rounded-full hover:bg-marigold hover:text-white transition-colors"
             >
               Last Appointment
             </button>
             <button
               onClick={setSinceStartOfTreatment}
-              className="px-3 py-1 text-xs bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 transition-colors"
+              className="px-3 py-1 text-xs bg-blue-light text-blue-custom rounded-full hover:bg-blue-custom hover:text-white transition-colors"
             >
               Since Start of Treatment
             </button>
@@ -134,7 +134,7 @@ export default function SummaryFilters() {
           <h4 className="font-medium text-gray-900">Include Data Types</h4>
           <button
             onClick={() => handleSelectAll(!isAllSelected)}
-            className="px-3 py-1 text-sm bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition-colors"
+            className="px-3 py-1 text-sm bg-teal-light text-primary-teal rounded-full hover:bg-teal-dark hover:text-white transition-colors"
           >
             {isAllSelected ? 'Deselect All' : 'Select All'}
           </button>
@@ -146,10 +146,10 @@ export default function SummaryFilters() {
                 type="checkbox"
                 checked={filters.dataTypes.includes(dataType.id)}
                 onChange={(e) => handleDataTypeChange(dataType.id, e.target.checked)}
-                className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                className="mt-1 w-4 h-4 text-primary-teal border-gray-300 rounded focus:ring-primary-teal"
               />
               <div className="flex-1">
-                <div className="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
+                <div className="text-sm font-medium text-gray-900 group-hover:text-primary-teal transition-colors">
                   {dataType.label}
                 </div>
                 <div className="text-xs text-gray-600 mt-0.5">

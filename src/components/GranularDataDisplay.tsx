@@ -194,12 +194,12 @@ export default function GranularDataDisplay() {
   const selectedDataTypes = filters.dataTypes.map(getDataTypeConfig);
 
   const colorClasses = {
-    blue: { bg: 'bg-blue-50', text: 'text-blue-600', border: 'border-blue-200' },
-    green: { bg: 'bg-green-50', text: 'text-green-600', border: 'border-green-200' },
-    purple: { bg: 'bg-purple-50', text: 'text-purple-600', border: 'border-purple-200' },
-    amber: { bg: 'bg-amber-50', text: 'text-amber-600', border: 'border-amber-200' },
-    indigo: { bg: 'bg-indigo-50', text: 'text-indigo-600', border: 'border-indigo-200' },
-    red: { bg: 'bg-red-50', text: 'text-red-600', border: 'border-red-200' },
+    blue: { bg: 'bg-teal-light', text: 'text-primary-teal', border: 'border-primary-teal' },
+    green: { bg: 'bg-teal-light', text: 'text-primary-teal', border: 'border-primary-teal' },
+    purple: { bg: 'bg-blue-light', text: 'text-blue-custom', border: 'border-blue-custom' },
+    amber: { bg: 'bg-marigold-light', text: 'text-marigold', border: 'border-marigold' },
+    indigo: { bg: 'bg-blue-light', text: 'text-blue-custom', border: 'border-blue-custom' },
+    red: { bg: 'bg-poppy-light', text: 'text-poppy', border: 'border-poppy' },
     gray: { bg: 'bg-gray-50', text: 'text-gray-600', border: 'border-gray-200' }
   };
 
@@ -213,7 +213,7 @@ export default function GranularDataDisplay() {
         const colors = colorClasses[section.color as keyof typeof colorClasses];
 
         return (
-          <div key={section.id} className="bg-white rounded-lg shadow-sm border border-gray-200">
+          <div key={section.id} className="bg-primary-white rounded-lg shadow-sm border border-gray-200">
             <button
               onClick={() => toggleSection(section.id)}
               className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"

@@ -38,17 +38,17 @@ export default function MetricsDashboard() {
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+    <div className="bg-primary-white rounded-lg shadow-sm border border-gray-200 p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-4">Treatment Metrics Overview</h3>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {metrics.map((metric, index) => {
           const IconComponent = metric.icon;
           const colorClasses = {
-            blue: 'bg-blue-50 text-blue-600',
-            green: 'bg-green-50 text-green-600',
-            purple: 'bg-purple-50 text-purple-600',
-            amber: 'bg-amber-50 text-amber-600'
+            blue: 'bg-blue-light text-blue-custom',
+            green: 'bg-teal-light text-primary-teal',
+            purple: 'bg-blue-light text-blue-custom',
+            amber: 'bg-marigold-light text-marigold'
           };
 
           return (

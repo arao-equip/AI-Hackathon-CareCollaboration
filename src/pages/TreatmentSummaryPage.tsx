@@ -28,7 +28,7 @@ export default function TreatmentSummaryPage() {
       {/* Back Button */}
       <button
         onClick={() => navigate('/')}
-        className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
+        className="flex items-center space-x-2 text-primary-teal hover:text-deep-teal transition-colors"
       >
         <ArrowLeft className="w-4 h-4" />
         <span>Back to Patient Selection</span>

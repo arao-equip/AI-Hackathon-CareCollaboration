@@ -81,7 +81,7 @@ Scheduled follow-up appointments and continued monitoring of treatment goals. Pa
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+    <div className="bg-primary-white rounded-lg shadow-sm border border-gray-200 p-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900">Generate Summary</h3>
         {filters.dataTypes.length > 0 && (
@@ -92,9 +92,9 @@ Scheduled follow-up appointments and continued monitoring of treatment goals. Pa
       </div>
 
       <div className="space-y-4">
-        <div className="bg-blue-50 rounded-lg p-4">
-          <h4 className="font-medium text-blue-900 mb-2">Selected Filters</h4>
-          <div className="space-y-2 text-sm text-blue-800">
+        <div className="bg-teal-light rounded-lg p-4">
+          <h4 className="font-medium text-deep-teal mb-2">Selected Filters</h4>
+          <div className="space-y-2 text-sm text-primary-teal">
             <p>
               <span className="font-medium">Date Range:</span> {' '}
               {new Date(filters.dateRange.start).toLocaleDateString()} - {' '}
@@ -110,7 +110,7 @@ Scheduled follow-up appointments and continued monitoring of treatment goals. Pa
         <button
           onClick={generateSummary}
           disabled={isGenerating || filters.dataTypes.length === 0}
-          className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+          className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-primary-teal text-white rounded-lg hover:bg-deep-teal disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
         >
           {isGenerating ? (
             <>

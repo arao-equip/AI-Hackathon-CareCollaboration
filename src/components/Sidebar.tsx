@@ -111,9 +111,9 @@ export default function Sidebar() {
                 className={`
                   w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-200 group relative
                   ${isActive 
-                    ? 'bg-blue-600 text-white shadow-lg' 
+                    ? 'bg-primary-teal text-white shadow-lg' 
                     : isLogo
-                    ? 'bg-gray-700 text-white hover:bg-gray-600'
+                    ? 'bg-deep-teal text-white hover:bg-primary-teal'
                     : 'text-gray-600 hover:bg-gray-200 hover:text-gray-900'
                   }
                 `}
@@ -123,7 +123,7 @@ export default function Sidebar() {
                 
                 {/* Notification badge */}
                 {item.hasNotification && item.notificationCount && (
-                  <div className="absolute -top-1 -right-1 w-5 h-5 bg-blue-600 text-white text-xs rounded-full flex items-center justify-center font-medium">
+                  <div className="absolute -top-1 -right-1 w-5 h-5 bg-primary-teal text-white text-xs rounded-full flex items-center justify-center font-medium">
                     {item.notificationCount}
                   </div>
                 )}
